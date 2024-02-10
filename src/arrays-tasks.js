@@ -39,11 +39,9 @@ function getIntervalArray(start, end) {
  */
 function sumArrays(arr1, arr2) {
   const maxLenghtArr = Math.max(arr1.length, arr2.length);
-
   const resultArr = Array.from({ length: maxLenghtArr }, (_, index) => {
     let arr1Digit;
     let arr2Digit;
-
     if (index < arr1.length) {
       arr1Digit = arr1[index];
     } else {
@@ -54,10 +52,8 @@ function sumArrays(arr1, arr2) {
     } else {
       arr2Digit = 0;
     }
-
     return arr1Digit + arr2Digit;
   });
-
   return resultArr;
 }
 
@@ -73,8 +69,8 @@ function sumArrays(arr1, arr2) {
  *    findElement(['Array', 'Number', 'string'], 'Date') => -1
  *    findElement([0, 1, 2, 3, 4, 5], 5) => 5
  */
-function findElement(/* arr, value */) {
-  throw new Error('Not implemented');
+function findElement(arr, value) {
+  return arr.indexOf(value);
 }
 
 /**
